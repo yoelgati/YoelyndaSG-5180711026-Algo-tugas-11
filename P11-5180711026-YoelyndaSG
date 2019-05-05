@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace::std;
+main()
+{
+    int brg,pil,a,harga,diskon,total;
+    int ah=0;
+    string kode,memb,nama;
+    cout<<"Apakah anda member ?  y/t:";cin>>memb;
+    if(memb=="y")
+        {cout<<"input kode :";cin>>kode;
+            if(kode=="A001"){cout<<"Nama   :Bayu";}
+            else if(kode=="A002"){cout<<"Nama   :Irvan";}
+            else if(kode=="A003"){cout<<"Nama   :Susiati";}
+            else if(kode=="A007"){cout<<"Nama   :Diana";}
+            else if(kode=="A008"){cout<<"Nama   :Roni";}
+            cout<<endl;
+            cout<<"jumlah macam barang :";cin>>brg;
+            cout<<"*****************************";cout<<endl;
+    for(int i=1;i<=brg;i++)
+    {
+        cout<<"Barang ke-"<<i<<endl;
+        cout<<"jumlah barang :";cin>>a;
+        cout<<"Harga   :";cin>>harga;
+    ah=ah+(a*harga);
+    cout<<"*****************************";cout<<endl;
+    }
+    cout<<"Diskon 5%";
+    cout<<endl;
+    diskon=ah*0.05;
+    total=ah-diskon;
+     cout<<"Total    :"<<total;
+     cout<<endl;
+     cout<<"*****************************";cout<<endl;
+}
+
+    else if(memb=="t")
+        {
+            cout<<"Inputkan Nama :";cin>>nama;
+            cout<<"jumlah macam barang :";cin>>brg;
+            cout<<"*****************************";cout<<endl;
+    for(int i=1;i<=brg;i++)
+    {
+        cout<<"Barang ke-"<<i<<endl;
+        cout<<"jumlah barang :";cin>>a;
+        cout<<"Harga   :";cin>>harga;
+    ah=ah+(a*harga);
+    cout<<"*****************************";cout<<endl;
+    }
+     cout<<"Total    :"<<ah;
+ }
+
+
+}
